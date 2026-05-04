@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ПланТехСтрой — Наши ресурсы</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Roboto", sans-serif;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 48px;
+  }
+  .topbar {
+    width: 100%;
+    background: #fff;
+    border-bottom: 3px solid #4caf7d;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topbar img {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+  }
+  .hero {
+    width: 100%;
+    background: #4caf7d;
+    color: #fff;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .hero h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .hero p { font-size: 14px; opacity: 0.9; }
+  .content { width: 100%; max-width: 520px; padding: 32px 20px 0; }
+  .section-title {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #999; margin-bottom: 14px;
+  }
+  .links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+  .link-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px; background: #fff;
+    border-radius: 8px; text-decoration: none; color: #222;
+    border: 1px solid #e8e8e8; transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .link-item:hover {
+    border-color: #4caf7d;
+    box-shadow: 0 2px 12px rgba(76,175,125,0.15);
+    transform: translateY(-1px);
+  }
+  .link-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .link-text { flex: 1; }
+  .link-label { font-size: 15px; font-weight: 700; color: #222; line-height: 1.2; }
+  .link-url { font-size: 12px; color: #999; margin-top: 2px; }
+  .link-arrow { color: #ccc; font-size: 22px; line-height: 1; transition: color 0.2s, transform 0.2s; }
+  .link-item:hover .link-arrow { color: #4caf7d; transform: translateX(3px); }
+  .qr-block {
+    background: #fff; border-radius: 10px;
+    border: 1px solid #e8e8e8; padding: 28px 20px;
+    text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .qr-sub { font-size: 13px; color: #777; margin-bottom: 20px; }
+  .qr-sub strong { color: #4caf7d; }
+  .qr-box {
+    display: inline-flex; padding: 10px; background: #fff;
+    border: 2px solid #4caf7d; border-radius: 10px;
+  }
+  .qr-hint { margin-top: 12px; font-size: 12px; color: #aaa; }
+  .footer { margin-top: 28px; font-size: 12px; color: #bbb; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <img src="https://planteh.ru/wp-content/uploads/logo.png" 
+       onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
+       alt="ПланТехСтрой">
+  <div id="logo-fallback" style="display:none; align-items:center; gap:10px;">
+    <div style="background:#4caf7d;color:#fff;font-weight:900;font-size:13px;padding:10px 12px;border-radius:6px;line-height:1.3;letter-spacing:0.03em">ПЛАН<br>ТЕХ<br>СТРОЙ</div>
+    <div style="font-size:22px;font-weight:700;color:#2d6e4e;letter-spacing:0.02em">ПланТехСтрой</div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Мы в социальных сетях</h1>
+  <p>Следите за нашими проектами и новостями</p>
+</div>
+
+<div class="content">
+  <div class="section-title">Наши ресурсы</div>
+  <div class="links">
+
+    <a class="link-item" href="https://planteh.ru" target="_blank">
+      <div class="link-icon" style="background:#e8f5ee">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="#4caf7d" stroke-width="2"/>
+          <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="#4caf7d" stroke-width="1.5"/>
+          <line x1="3" y1="12" x2="21" y2="12" stroke="#4caf7d" stroke-width="1.5"/>
+          <line x1="4.5" y1="7.5" x2="19.5" y2="7.5" stroke="#4caf7d" stroke-width="1.2"/>
+          <line x1="4.5" y1="16.5" x2="19.5" y2="16.5" stroke="#4caf7d" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Официальный сайт</div>
+        <div class="link-url">planteh.ru</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://t.me/planteh64" target="_blank">
+      <div class="link-icon" style="background:#e8f5fc">
+        <svg width="26" height="26" viewBox="0 0 240 240">
+          <circle cx="120" cy="120" r="120" fill="#2CA5E0"/>
+          <path d="M175 75L152.7 170.5c-1.7 7.4-6.1 9.2-12.4 5.7l-34.1-25.1-16.5 15.9c-1.8 1.8-3.3 3.3-6.8 3.3l2.4-34.3L152 97.4c2.9-2.6-.6-4-4.5-1.4l-80.9 50.9-34.3-10.7c-7.5-2.3-7.6-7.5 1.5-11.1l133.5-51.4c6.2-2.3 11.6 1.5 9.7 11.3z" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Telegram</div>
+        <div class="link-url">t.me/planteh64</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://youtube.com/@ПланТехСтрой" target="_blank">
+      <div class="link-icon" style="background:#feeaea">
+        <svg width="26" height="26" viewBox="0 0 24 24">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z" fill="#FF0000"/>
+          <polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">YouTube</div>
+        <div class="link-url">youtube.com/@ПланТехСтрой</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://rutube.ru/channel/77589426" target="_blank">
+      <div class="link-icon" style="background:#fff0e8">
+        <svg width="26" height="26" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="18" fill="#FF6B2B"/>
+          <path d="M28 24h24c10 0 16 5 16 13 0 6-4 10.5-10 12.5L72 76H56L44 55H42V76H28V24zm14 20h9c4.5 0 7-2.2 7-6s-2.5-6-7-6H42v12z" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Rutube</div>
+        <div class="link-url">rutube.ru/channel/77589426</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://dzen.ru/id/69ddea1b492cae63bda2ffd6" target="_blank">
+      <div class="link-icon" style="background:#f5f5f5">
+        <svg width="26" height="26" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="18" fill="#000"/>
+          <path d="M50 10c0 22-18 38-40 40 22 2 40 18 40 40 0-22 18-38 40-40-22-2-40-18-40-40z" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Дзен</div>
+        <div class="link-url">dzen.ru</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://vk.com/club237624982" target="_blank">
+      <div class="link-icon" style="background:#eaf0f8">
+        <svg width="26" height="26" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="18" fill="#4680C2"/>
+          <path d="M53.6 69.5H58c1.7 0 2.4-.7 2.4-1.7 0 0-.2-4.8 2.2-5.5 2.4-.7 5.5 4.7 8.8 6.7 2.5 1.5 4.4 1.2 4.4 1.2l8.8-.1s4.4-.3 2.3-3.9c-.2-.3-1.6-3.2-8-8.7-6.7-5.8-5.8-4.9 2.3-15.1 5-6.6 7-10.7 6.3-12.5-.7-1.6-4.6-1.2-4.6-1.2H68.6c0 0-1.6.3-2.3 1.2 0 0-3.2 8.3-7.5 13.7-2.1 2.8-3 3-3.4 2.8-.8-.4-.8-1.6-.8-2.5v-13c0 0-.2-3.3-3.3-3.3H41.5c-2 0-3.2 1.5-3.2 1.5s3.2.5 3.2 3.9v11.6c0 .5 0 2.4-1.5 2.4-1.9 0-4.6-6.6-7.1-14.1-.5-1.7-1-2.5-2.1-2.5H21c-1.2 0-1.8.8-1.8.8s-.4.4 0 2.2c3.7 8.7 13.3 31.5 26.4 31.5 0 0 1.1 0 1.8-1 .6-.9.6-1.9.6-1.9s.8.9 2.6.9z" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">ВКонтакте</div>
+        <div class="link-url">vk.com/club237624982</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+    <a class="link-item" href="https://yandex.ru/rythm/businesses/@planteh64" target="_blank">
+      <div class="link-icon" style="background:#feeaea">
+        <svg width="26" height="26" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="18" fill="#FC3F1D"/>
+          <path d="M56 80H45V44H36V30c8 0 12-3.5 13-11h7v61z" fill="white"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Яндекс Бизнес</div>
+        <div class="link-url">yandex.ru / planteh64</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+
+  </div>
+
+  <div class="qr-block">
+    <div class="section-title">QR-код</div>
+    <div class="qr-sub">Отсканируйте, чтобы открыть <strong>все наши ресурсы</strong></div>
+    <div class="qr-box" id="qr-main"></div>
+    <div class="qr-hint">artemw997-max.github.io/planteh-links</div>
+  </div>
+
+  <div class="footer">© ПланТехСтрой · Саратов, ул. Университетская, 28, офис 400</div>
+
+</div>
+
+<script>
+  new QRCode(document.getElementById("qr-main"), {
+    text: "https://artemw997-max.github.io/planteh-links",
+    width: 200,
+    height: 200,
+    colorDark: "#2d6e4e",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+
+</body>
+</html>
